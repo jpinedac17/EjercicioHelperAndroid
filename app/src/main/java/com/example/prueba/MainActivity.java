@@ -24,20 +24,14 @@ public class MainActivity extends AppCompatActivity {
         buttonIrAContactos = findViewById(R.id.buttonIrAContactos);
         buttonIrAGestion = findViewById(R.id.buttonIrAGestion);
 
-        buttonIrAContactos.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(MainActivity.this, ContactoActivity.class);
-                startActivity(intent);
-            }
+        buttonIrAContactos.setOnClickListener(v -> {
+            Intent intent = new Intent(MainActivity.this, ContactoActivity.class);
+            startActivity(intent);
         });
 
-        buttonIrAGestion.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(MainActivity.this, GestionActivity.class);
-                startActivity(intent);
-            }
+        buttonIrAGestion.setOnClickListener(v -> {
+            Intent intent = new Intent(MainActivity.this, GestionActivity.class);
+            startActivity(intent);
         });
 
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
